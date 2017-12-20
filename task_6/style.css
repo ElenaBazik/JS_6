@@ -1,0 +1,12 @@
+.field {
+    background-color:#2F3F4F;
+    width:280px;
+    height:75px;
+}
+.switch{
+    background-color:#E89361;
+    border-radius: 5px;
+    width:71px;
+    height:71px;
+    border: 2px solid black;
+}
