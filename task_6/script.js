@@ -1,7 +1,8 @@
 'use strict'
 
+var trigger1 = document.querySelector('.field');
 var trigger = document.querySelector('.switch');
-trigger.addEventListener('click', rightTrigger);
+trigger1.addEventListener('click', rightTrigger);
 trigger.style.marginLeft = '3px';
 
 function rightTrigger() {
