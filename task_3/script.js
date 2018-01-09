@@ -1,16 +1,24 @@
-'use strict'
-
-var block3 = document.getElementById('block');
-var div = document.createElement('div');
-
-(function getBlocks(){
-	for (var i = 1; i<300; i++){
-		var divs = div.cloneNode(true);
-		divs.className = 'block';
-		block3.appendChild(divs);
-
-			divs.onmouseenter = function(){
-			this.style.borderRadius = '20px';
-			}
+(function(){
+	'use strict'
+	let container = document.getElementById('block');
+	function addBlocks () {
+		let fragment = document.createDocumentFragment();
+		for (let i = 0; i < 405; i++) {
+ 			fragment.appendChild(document.createElement('div'));
+ 			fragment.children[i].className = 'block'
+		}
+		container.appendChild(fragment);
 	}
+	function addEvent () {
+		container.addEventListener('mouseover', (ev)=>{
+			if (ev.target.className == 'block') {
+				ev.target.className += ' hovered'
+			}
+		})
+	}
+	function init () {
+		addBlocks()
+		addEvent()
+	}
+	document.addEventListener('DOMContentLoaded', init)
 })();
